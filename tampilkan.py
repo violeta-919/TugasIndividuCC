@@ -26,4 +26,4 @@ if st.button("Analisis"):
         prediction = label[np.argmax(probabilities)]
 
         st.markdown("### Hasil Analisis:")
-        st.success(f"**Sentimen ulasan menunjukkan bawah ulasan:** {prediction.capitalize()}")
+        st.success(f"**Sentimen ulasan menunjukkan bawah ulasan anda** {prediction.capitalize()}")
