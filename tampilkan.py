@@ -13,7 +13,7 @@ st.title("🎬 Analisis Sentimen Ulasan Film IMDB")
 st.write("Masukkan ulasan film anda dan kami akan menentukan apakah ulasan tersebut positif atau negatif.")
 
 # Input user
-review_input = st.text_area("Tulis ulasan film Anda di kolom ini!", height=200)
+review_input = st.text_area("Tulis ulasan film Anda di kolom ini (dengan bahasa Inggris)!", height=200)
 
 if st.button("Analisis"):
     if review_input.strip() == "":
