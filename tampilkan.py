@@ -27,4 +27,3 @@ if st.button("Analisis"):
 
         st.markdown("### Hasil Analisis:")
         st.success(f"**Sentimen ulasan menunjukkan bawah ulasan:** {prediction.capitalize()}")
-        })
