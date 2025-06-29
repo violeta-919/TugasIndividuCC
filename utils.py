@@ -2,7 +2,7 @@ import nltk
 nltk.data.path.append('./nltk_data')  # arahkan ke folder lokal
 nltk.download('punkt', download_dir='./nltk_data', quiet=True)
 nltk.download('stopwords', download_dir='./nltk_data', quiet=True)
-nltk.download('punkt_tab')
+nltk.download('punkt_tab', download_dir='./nltk_data', quiet=True)
 
 import re
 from nltk.tokenize import word_tokenize
