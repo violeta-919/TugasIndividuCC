@@ -9,11 +9,11 @@ vectorizer = joblib.load('vectorizer.pkl')
 
 # UI Streamlit
 st.set_page_config(page_title="Analisis Sentimen", layout="centered")
-st.title("🎬 Analisis Sentimen Ulasan Film")
-st.write("Masukkan ulasan film anda di sini!")
+st.title("🎬 Analisis Sentimen Ulasan Film IMDB")
+st.write("Masukkan ulasan film anda dan kami akan menentukan apakah ulasan tersebut positif atau negatif.")
 
 # Input user
-review_input = st.text_area("Tulis ulasan film Anda di sini", height=200)
+review_input = st.text_area("Tulis ulasan film Anda di kolom ini!", height=200)
 
 if st.button("Analisis"):
     if review_input.strip() == "":
@@ -26,9 +26,5 @@ if st.button("Analisis"):
         prediction = label[np.argmax(probabilities)]
 
         st.markdown("### Hasil Analisis:")
-        st.success(f"**Sentimen:** {prediction.capitalize()}")
-        st.write("**Probabilitas:**")
-        st.write({
-            "Negatif": f"{probabilities[0]*100:.2f}%",
-            "Positif": f"{probabilities[1]*100:.2f}%"
+        st.success(f"**Sentimen ulasan menunjukkan bawah ulasan:** {prediction.capitalize()}")
         })
