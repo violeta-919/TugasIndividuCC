@@ -8,8 +8,8 @@ vectorizer = joblib.load('vectorizer.pkl')
 
 # UI Streamlit
 st.set_page_config(page_title="Analisis Sentimen", layout="centered")
-st.title("🎬 Analisis Sentimen Ulasan Film IMDB")
-st.write("Masukkan ulasan film, lalu klik tombol **Analisis** untuk memprediksi apakah ulasan tersebut positif atau negatif.")
+st.title("🎬 Analisis Sentimen Ulasan Film")
+st.write("Masukkan ulasan film anda di sini!")
 
 # Input user
 review_input = st.text_area("Tulis ulasan film Anda di sini", height=200)
