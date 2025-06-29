@@ -1,27 +1,10 @@
+from utils import preprocess_text
 import streamlit as st
 import joblib
-import re
-import numpy as np
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-import nltk
-
-# Download resource NLTK yang dibutuhkan
-nltk.download('punkt')
-nltk.download('stopwords')
 
 # Load model dan vectorizer
 model = joblib.load('sentiment_model.pkl')
 vectorizer = joblib.load('vectorizer.pkl')
-
-# Preprocessing function (harus sama dengan yang dipakai saat training)
-stop_words = set(stopwords.words('english'))
-def preprocess_text(text):
-    text = text.lower()
-    text = re.sub(r'[^a-z\s]', '', text)
-    tokens = word_tokenize(text)
-    tokens = [word for word in tokens if word not in stop_words]
-    return " ".join(tokens)
 
 # UI Streamlit
 st.set_page_config(page_title="Analisis Sentimen", layout="centered")
