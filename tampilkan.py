@@ -1,6 +1,7 @@
 from utils import preprocess_text
 import streamlit as st
 import joblib
+import numpy as np
 
 # Load model dan vectorizer
 model = joblib.load('sentiment_model.pkl')
