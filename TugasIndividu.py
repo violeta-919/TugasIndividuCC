@@ -18,7 +18,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-file_path = "C:/Users/wioll/Downloads/IMDB-Dataset.csv"
+file_path = "C:/Users/wioll/Downloads/TugasIndividuCC/IMDB-Dataset.csv"
 
 try:
     df = pd.read_csv(file_path)
