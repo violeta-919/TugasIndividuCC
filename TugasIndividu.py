@@ -31,10 +31,6 @@ except FileNotFoundError:
     print("Pastikan nama file dan path sudah benar.")
     exit()
 
-# Ambil kolom teks dan label
-x = df['review']     # Ganti jika nama kolom berbeda
-y = df['sentiment']
-
 stop_words = set(stopwords.words('english'))
 
 def preprocess_text(text):
